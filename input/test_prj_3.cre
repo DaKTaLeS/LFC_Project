@@ -1,0 +1,21 @@
+program
+	var p : ^^^int;
+	var q : ^^^int
+begin
+	alloc(p);
+	alloc(q);
+	^^^p := 10;
+	^^^q := 20;
+	write(@p);
+	write(p);
+	write(^p);
+	write(^^p);
+	write(^^^p);
+	write(@q);
+	write(q);
+	write(^q);
+	write(^^q);
+	write(^^^q);
+	^^^p := ^^^q;
+	^^p := ^q	
+end

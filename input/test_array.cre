@@ -1,0 +1,16 @@
+program
+    var v : array[4 .. 9] of int;
+    var i : int;
+	var p : ^int
+
+begin
+    for i := 4 to 9 do
+        v[i] := i - 3;
+    i := 9;
+	p := @i;
+    while (3 < ^p) do
+        begin
+            write(v[^p]);
+            ^p := ^p - 1
+        end
+end

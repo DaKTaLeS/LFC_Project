@@ -1,0 +1,18 @@
+program
+	var p: ^^^^int;
+	var i:int
+begin
+	for i:=100 to 200 do
+		begin
+			alloc(p);
+			^^^^p := i;
+			write(@p);
+			write(p);
+			write(^p);
+			write(^^p);
+			write(^^^p);
+			write(^^^^p);
+			free(p)
+		end;
+	write(nil)
+end

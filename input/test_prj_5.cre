@@ -1,0 +1,49 @@
+program
+	var v : array[4 .. 9] of int;
+	var i : int;
+	var n : int;
+	var p : ^int;
+	var q : ^^int;
+	var z : ^int
+		
+	procedure pow(n:int , e:int)
+		var p: ^int
+	begin
+		alloc(p);
+		^p := n;
+		if (e = 0) then
+			write(1)
+		else
+			begin
+				while (1 < e) do 
+					begin
+						^p := ^p * n;
+						e := e - 1
+					end
+			end;
+		write(^p);
+		free(p)
+	end
+
+
+begin
+	
+	n := 3;
+	p := @n;
+	alloc(q);
+	alloc(z);
+	^q := p;
+	
+	for i := 4 to 9 do
+		begin
+			v[i] := i - 3
+		end;
+	
+    ^z := 9;
+    while (3 < ^z) do
+        begin
+            write(v[^z]);
+		   call pow(v[^z],^^q);
+            ^z := ^z - 1
+        end
+end

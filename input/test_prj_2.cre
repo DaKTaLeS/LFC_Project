@@ -1,0 +1,21 @@
+program
+	var x: int;
+	var y: int;
+	var p : ^int;
+	var q : ^int
+begin
+	alloc(p);
+	x := 5;
+	y := 50;
+	^p := x;
+	q := @y;
+	x := x + 5;
+	write(^p);
+	write(x);
+	free(p);
+	write(y);
+	write(^q);
+	y := y + 10;
+	write(^q)
+	
+end

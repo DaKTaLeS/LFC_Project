@@ -1,0 +1,11 @@
+program
+	var x: int;
+	var y: int;
+	var p : ^int;
+	var q: ^^float
+begin
+	x := 1;
+	p := @x;
+	y := ^p + 4;
+	write(y)
+end
